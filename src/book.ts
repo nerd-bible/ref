@@ -185,7 +185,7 @@ export const patterns = {
 	pro: "pr(overbs?)?",
 	ecc: ["ecc(lesiastes)?", "qoh(elet)?"],
 	sng: ["song\\s+of\\s+(songs|solomon)", "canticle\\s+of\\s+canticles", "sng"],
-	isa: "isi?ah?",
+	isa: "isa?i?ah?",
 	jer: "jer(emiah)?",
 	lam: "lam(entations?)?",
 	ezk: "eze?k(iel)?",
