@@ -3,7 +3,7 @@ import * as Book from "./book.ts";
 export type B = { book: Book.Id };
 export type Bc = B & { chapter: number };
 export type Bcv = Bc & { verse: number };
-export type Cv = { chapter: number, verse: number };
+export type Cv = { chapter: number; verse: number };
 // Parts are silly because parts usually aren't published.
 // part?: "a" | "b" | "c" | ...;
 // Words are silly for translations that get new versions... which should be
@@ -12,7 +12,11 @@ export type Cv = { chapter: number, verse: number };
 
 const noCapture = (pattern: string) => pattern.replace(/\(/g, "(?:");
 
-const book = `(${noCapture(Object.values(Book.regexes).map(r => r.source).join("|"))})`;
+const book = `(${noCapture(
+	Object.values(Book.regexes)
+		.map((r) => r.source)
+		.join("|"),
+)})`;
 const chapter = `(\\d+)`;
 const verse = `(\\d+)`;
 export const patterns = { book, chapter, verse };
