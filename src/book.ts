@@ -136,11 +136,11 @@ export type Id = (typeof ids)[number];
 const paul = "letter\\s+(of|from)\\s+paul\\s+";
 const paulTo = `${paul}to\\s+(the\\s+)?`;
 const sam = "sa(muel)?";
-const kin = "ki(ngs)?";
-const chr = "ch(ronicles)?";
+const kin = "ki(ngs?)?";
+const chr = "ch(ronicles?)?";
 const jon = "jo?hn|j[oh]?n";
-const cor = `(${paulTo})?cor(inthians)?`;
-const thes = `(${paulTo})?thes(salonians)?`;
+const cor = `(${paulTo})?cor(inthians?)?`;
+const thes = `(${paulTo})?thes(salonians?)?`;
 const tim = `(${paulTo})?tim(othy)?`;
 const pet = "pe?te?r?";
 
@@ -181,13 +181,13 @@ export const patterns = {
 	neh: "neh(emiah)?",
 	est: "est(her)?",
 	job: "job",
-	psa: "psa(lms)?",
-	pro: "pr(overbs)?",
+	psa: "psa(lms?)?",
+	pro: "pr(overbs?)?",
 	ecc: ["ecc(lesiastes)?", "qoh(elet)?"],
 	sng: ["song\\s+of\\s+(songs|solomon)", "canticle\\s+of\\s+canticles", "sng"],
 	isa: "isi?ah?",
 	jer: "jer(emiah)?",
-	lam: "lam(entations)?",
+	lam: "lam(entations?)?",
 	ezk: "eze?k(iel)?",
 	hos: "hos(ea)?",
 	dan: "dan(iel)?",
@@ -216,15 +216,15 @@ export const patterns = {
 	"1co": first(cor).concat("1co"),
 	gal: `(${paulTo})?gal(atians)?`,
 	eph: `(${paulTo})?eph(esians)?`,
-	php: ["philippians", "php"],
-	col: `(${paulTo})?col(ossians)?`,
+	php: ["philippians?", "php"],
+	col: `(${paulTo})?col(ossians?)?`,
 	"2th": second(thes).concat("2th"),
 	"1th": first(thes).concat("1th"),
 	"2ti": second(tim).concat("2ti"),
 	"1ti": first(tim).concat("1ti"),
 	tit: "tit(us)?",
 	phm: "phl?m|philemon",
-	heb: "heb(rews)?",
+	heb: "heb(rews?)?",
 	jas: "ja(me)?s",
 	"2pe": second(pet).concat("2pe"),
 	"1pe": first(pet).concat("1pe"),

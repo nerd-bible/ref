@@ -22,6 +22,11 @@ test("basic ref", () => {
 		chapter: 2,
 		verse: 3,
 	});
+	expect(parseBcv("Psalm 1:1")).toEqual({
+		book: "psa",
+		chapter: 1,
+		verse: 1,
+	});
 });
 
 test("weird delimiters", () => {
