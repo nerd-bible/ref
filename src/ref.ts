@@ -26,7 +26,7 @@ const cDelim = "\\s*";
 const vDelim = noCapture("\\s*((v(erse)?\\s*)|[:.]+)");
 export const delimiters = { chapter: cDelim, verse: vDelim };
 
-const bcv = new RegExp(
+export const bcv = new RegExp(
 	`\\b${book}(?:${cDelim}${chapter}(?:${vDelim}${verse})?)?`,
 	"i",
 );
@@ -41,7 +41,7 @@ export function parseBcv(r: string): B | Bc | Bcv {
 	return res as Bcv;
 }
 
-const bcvStrict = new RegExp(
+export const bcvStrict = new RegExp(
 	`\\b${book}${cDelim}${chapter}${vDelim}${verse}`,
 	"i",
 );
