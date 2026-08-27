@@ -4,8 +4,8 @@
 	"exports": {
 		".": {
 			"import": {
-				"nbsource": "./src/index.ts",
-				"node": "./dist/index.js",
+				"module": "./dist/index.js",
+				"development": "./src/index.ts",
 				"types": "./dist/index.d.ts"
 			}
 		},
