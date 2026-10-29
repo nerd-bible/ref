@@ -27,6 +27,16 @@ test("basic ref", () => {
 		chapter: 1,
 		verse: 1,
 	});
+	expect(parseBcv("John 20:11")).toEqual({
+		book: "jhn",
+		chapter: 20,
+		verse: 11,
+	});
+	expect(parseBcv("1 John 20:11")).toEqual({
+		book: "1jn",
+		chapter: 20,
+		verse: 11,
+	});
 });
 
 test("weird delimiters", () => {
